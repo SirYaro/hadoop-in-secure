@@ -120,6 +120,7 @@ sudo su - yarn -c '/etc/hadoop/bin/yarn --daemon start resourcemanager'
 ### Run YARN node manager 
 
 ```bash
+chmod  6050 /etc/hadoop/bin/container-executor
 sudo /etc/hadoop/bin/yarn --daemon start nodemanager
 ```
 
