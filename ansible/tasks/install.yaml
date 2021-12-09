@@ -18,6 +18,11 @@
     recurse: yes
     owner: root
     group: root
+- name: Install packages
+  yum: name={{ item }} state=present update_cache=yes
+  with_items:
+    - "@Development tools"
+    - java-1.8.0-openjdk-devel
 # JSVC
 - name: Unarchive Commons Daemon
   unarchive:
